@@ -13,13 +13,19 @@ class Pessoa():
         return f'{self.nome.ljust(15)} | {str(self.idade).ljust(15)} | {self.profissao}'
     
     def aniversario(self):
-        self.idade = self.idade + 1
-        return self.idade
+        self.idade += 1
 
-    @classmethod
-    def saudacao(cls):
-        for pessoa in cls.pessoas:
-            print(f'Meu nome é {pessoa.nome}. Eu tenho {pessoa.idade} anos e minha profissão é {pessoa.profissao}')
+    # @classmethod
+    # def saudacao(cls):
+    #     for pessoa in cls.pessoas:
+    #         print(f'Meu nome é {pessoa.nome}. Eu tenho {pessoa.idade} anos e minha profissão é {pessoa.profissao}')
+
+    @property
+    def saudacao(self):
+        if self.profissao:
+            return f'Olá, sou {self.nome}! Trabalho como {self.profissao}.'
+        else:
+            return f'Olá, sou {self.nome}!'
         
 pessoa1 = Pessoa("Joao", 23, "CEO da NASA")
 pessoa2 = Pessoa("beatriz", 19, "Dona da Zara")
