@@ -30,19 +30,19 @@ class Livro():
         return resultado
     
 
+if __name__ == "__main__":
+    livro1 = Livro ("Harry Potter", "Dumbledore", 2001)
+    livro2 = Livro ("Blade", "Dracula", 1934)
+    livro3 = Livro ("Rapunzel", "Valdisney", 1934)
+    livro4 = Livro ("Pinoquio", "Ze'da manga", 1921)
 
-livro1 = Livro ("Harry Potter", "Dumbledore", 2001)
-livro2 = Livro ("Blade", "Dracula", 1934)
-livro3 = Livro ("Rapunzel", "Valdisney", 1934)
-livro4 = Livro ("Pinoquio", "Ze'da manga", 1921)
+    livro1.emprestar()
 
-livro1.emprestar()
+    # livro1.listar()
 
-# livro1.listar()
+    # Livro.verificar_disponibilidade(1934)
 
-# Livro.verificar_disponibilidade(1934)
-
-livros_1934 = Livro.verificar_disponibilidade(1934)
-for x in livros_1934:
-    print(x.autor)
-print(len(livros_1934))
+    livros_1934 = Livro.verificar_disponibilidade(1934)
+    for x in livros_1934:
+        print(x.autor)
+    print(len(livros_1934))
