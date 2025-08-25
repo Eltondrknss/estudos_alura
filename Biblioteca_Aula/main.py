@@ -8,3 +8,6 @@ livro002.emprestar()
 livro001.listar()
 print(livro002)
 print(livro003)
+
+temalgum = Livro.verificar_disponibilidade(1921)
+print(temalgum)
